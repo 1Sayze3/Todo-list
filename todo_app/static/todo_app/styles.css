@@ -216,11 +216,27 @@ button:active {
 
     .task {
         padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .task a {
         padding: 6px 12px;
         font-size: 0.95rem;
+        text-align: center;
+        flex: 1;
+    }
+
+    .task-title {
+        margin-bottom: 10px;
+        font-size: 1.05rem;
+    }
+
+    /* Adjusted task actions for mobile view */
+    .task-actions {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 }
 
@@ -234,4 +250,11 @@ button:active {
     font-size: 1.2rem;
     color: #6c757d;
     margin-bottom: 20px;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
