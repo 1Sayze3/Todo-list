@@ -9,10 +9,10 @@
 <body>
     <h1>To-Do List</h1>
 
-    <a href="{% url 'add_task' %}" class="add-button">Add New Task</a>
+    {% if tasks %}
+        <a href="{% url 'add_task' %}" class="add-button">Add New Task</a>
 
-    <div class="task-list">
-        {% if tasks %}
+        <div class="task-list">
             {% for task in tasks %}
                 <div class="task">
                     <span>{{ task.title }}</span>
@@ -20,9 +20,12 @@
                     <a href="{% url 'delete_task' task.id %}" class="delete-button">Delete</a>
                 </div>
             {% endfor %}
-        {% else %}
-            <p>No tasks yet. Add one!</p>
-        {% endif %}
-    </div>
+        </div>
+    {% else %}
+        <div class="no-task-wrapper">
+            <p class="no-task-message">No tasks yet. Add one!</p>
+            <a href="{% url 'add_task' %}" class="add-button">Add New Task</a>
+        </div>
+    {% endif %}
 </body>
 </html>
