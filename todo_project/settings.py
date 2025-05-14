@@ -7,6 +7,11 @@ SECRET_KEY = 'django-insecure-isnno09#-q!nn-a*fxr!xbsr57fzzhm#m3o+i2v66ht4%h@$n!
 DEBUG = True
 ALLOWED_HOSTS = ['*']
 
+# CSRF trusted origins to allow your production app
+CSRF_TRUSTED_ORIGINS = [
+    'https://todo-app-production-7f47.up.railway.app',  # Replace with your production URL
+]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
