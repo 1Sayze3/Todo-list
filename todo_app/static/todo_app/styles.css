@@ -26,8 +26,8 @@ h1 {
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* Add Task Button */
-.add-button {
+/* Add Task and Edit Task Button */
+.add-button, .edit-button {
     display: inline-block;
     padding: 12px 25px;
     background-color: #0069d9; /* Sleek blue color */
@@ -41,13 +41,13 @@ h1 {
     text-transform: uppercase;
 }
 
-.add-button:hover {
+.add-button:hover, .edit-button:hover {
     background-color: #0056b3;
     transform: translateY(-4px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
 }
 
-.add-button:active {
+.add-button:active, .edit-button:active {
     transform: translateY(0);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
@@ -187,7 +187,7 @@ button:active {
 }
 
 /* Responsive Design for Mobile Devices */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     body {
         padding: 20px;
     }
@@ -196,7 +196,7 @@ button:active {
         font-size: 2rem;
     }
 
-    .add-button {
+    .add-button, .edit-button {
         padding: 10px 20px;
         font-size: 1rem;
     }
