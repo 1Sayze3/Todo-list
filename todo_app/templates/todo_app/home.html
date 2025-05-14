@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>To-Do List</title>
     <link rel="stylesheet" href="{% static 'todo_app/styles.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <h1>To-Do List</h1>
@@ -15,9 +16,11 @@
         <div class="task-list">
             {% for task in tasks %}
                 <div class="task">
-                    <span>{{ task.title }}</span>
-                    <a href="{% url 'edit_task' task.id %}" class="edit-button">Edit</a>
-                    <a href="{% url 'delete_task' task.id %}" class="delete-button">Delete</a>
+                    <span class="task-title">{{ task.title }}</span>
+                    <div class="task-actions">
+                        <a href="{% url 'edit_task' task.id %}" class="edit-button">Edit</a>
+                        <a href="{% url 'delete_task' task.id %}" class="delete-button">Delete</a>
+                    </div>
                 </div>
             {% endfor %}
         </div>
